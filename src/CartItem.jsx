@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, updateQuantity } from './CartSlice';
+import { removeItem, updateQuantity, addItem } from './CartSlice';
 import './CartItem.css';
 
 const CartItem = ({ onContinueShopping }) => {
@@ -40,6 +40,10 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(removeItem(item));
   };
 
+  const handleAddToCart = (item) => {
+    dispatch(addItem(item));
+  };
+
   // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {
     return (item.quantity * parseFloat(item.cost.replace('$', ''))).toFixed(2);
@@ -62,6 +66,7 @@ const CartItem = ({ onContinueShopping }) => {
               </div>
               <div className="cart-item-total">Total: ${calculateTotalCost(item)}</div>
               <button className="cart-item-delete" onClick={() => handleRemove(item)}>Delete</button>
+              <button className="cart-item-add" onClick={() => handleAddToCart(item)}>Add More</button>
             </div>
           </div>
         ))}
