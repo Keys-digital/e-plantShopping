@@ -164,14 +164,24 @@ body {
     color: white;
     display: flex;
 }
-.cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
+.cart_quantity_count {
     position: absolute;
-    font-size: 29px;
-
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Precisely center the count */
+    font-size: 20px; /* Adjust size for readability */
+    background-color: red; /* Ensure visibility */
+    border-radius: 50%; /* Make it circular */
+    width: 28px; /* Set width to fit the count */
+    height: 28px; /* Set height to fit the count */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    z-index: 1; /* Ensure it's above the cart icon */
 }
+
 .plantname_heading{
    display: flex;
    align-items: center;
