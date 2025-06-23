@@ -1,0 +1,49 @@
+.about-us-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 0 12px; /* tighter padding on mobile */
+    line-height: 1.5;
+  }
+}
+
+.about-us-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-us-content {
+  font-size: 18px;
+  margin-top: -15px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+  line-height: 1.6;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.plant_logo_right {
+  text-align: right;
+}
+
+.plant_logo_left {
+  text-align: left;
+}
